@@ -1,0 +1,2472 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise AI Website Builder v0.01, https://ai.mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise AI v0.01, ai.mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="images/logo5.png" type="image/x-icon">
+  <meta name="description" content="Create a command-line or web-based to-do list application where users can add, delete, and mark tasks as completed.">
+
+  <title>Task Manager Pro</title>
+  <link rel="stylesheet" href="{% static 'web/assets/mobirise-icons2/mobirise2.css' %}">
+  <link rel="stylesheet" href="{% static 'parallax/jarallax.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'animatecss/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="{% static 'mobirise/css/additional.css' %}"><link rel="stylesheet" href="{% static 'mobirise/css/additional.css' %}" type="text/css">
+  
+  
+
+  <style>:root{ --background: #FEFAE6; --dominant-color: #F0C808; --primary-color: #7FB069; --secondary-color: #4D5E85; --success-color: #24C279; --danger-color: #C42231; --warning-color: #E6AD00; --info-color: #0CB8DA; --background-text: #000000; --dominant-text: #000000; --primary-text: #000000; --secondary-text: #FFFFFF; --success-text: #000000; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #FFFFFF;}</style>
+</head>
+<body>
+
+
+    <style>
+.cid-u1NLztJWEU  {
+  z-index: 1000;
+  width: 100%;
+  position: relative;
+}
+.cid-u1NLztJWEU  .dropdown-item:before {
+  font-family: Moririse2 !important;
+  content: "\e966";
+  display: inline-block;
+  width: 0;
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  margin-right: 0.5rem;
+  line-height: 1;
+  font-size: inherit;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  transform: scale(0, 1);
+  transition: all 0.25s ease-in-out;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztJWEU  .navbar-toggler {
+    transform: scale(0.8);
+  }
+}
+.cid-u1NLztJWEU  .navbar-brand {
+  flex-shrink: 0;
+  align-items: center;
+  margin-right: 0;
+  padding: 10px 0;
+  transition: all 0.3s;
+  word-break: break-word;
+  z-index: 1;
+}
+.cid-u1NLztJWEU  .navbar-brand img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.cid-u1NLztJWEU  .navbar-brand .navbar-caption {
+  line-height: inherit !important;
+}
+.cid-u1NLztJWEU  .navbar-brand .navbar-logo a {
+  outline: none;
+}
+.cid-u1NLztJWEU  .navbar-nav {
+  margin: auto;
+  margin-left: 0;
+  margin-left: auto;
+}
+.cid-u1NLztJWEU  .navbar-nav .nav-item {
+  padding: 0 !important;
+  transition: 0.3s all !important;
+}
+.cid-u1NLztJWEU  .navbar-nav .nav-item .nav-link {
+  padding: 16px !important;
+  margin: 0 !important;
+  border-radius: 1rem !important;
+  transition: 0.3s all !important;
+}
+.cid-u1NLztJWEU  .navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(27, 31, 10, 0.06);
+}
+.cid-u1NLztJWEU  .navbar-nav .open .nav-link::after {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  .cid-u1NLztJWEU  .navbar-nav .open .nav-link::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    top: 100%;
+    background: transparent;
+    position: absolute;
+  }
+}
+.cid-u1NLztJWEU  .navbar-nav .dropdown-item {
+  padding: 12px !important;
+  border-radius: 0.5rem !important;
+  margin: 0 8px !important;
+  transition: 0.3s all !important;
+}
+.cid-u1NLztJWEU  .navbar-nav .dropdown-item:hover {
+  background-color: rgba(27, 31, 10, 0.06);
+}
+@media (min-width: 992px) {
+  .cid-u1NLztJWEU  .navbar-nav {
+    padding-left: 1.5rem;
+  }
+}
+.cid-u1NLztJWEU  .nav-link {
+  width: fit-content;
+  position: relative;
+}
+.cid-u1NLztJWEU  .navbar-logo {
+  margin: 0 !important;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztJWEU  .navbar-logo {
+    padding-left: 0;
+  }
+}
+.cid-u1NLztJWEU  .navbar-caption {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztJWEU  .nav-dropdown {
+    padding-bottom: 0.5rem;
+  }
+}
+.cid-u1NLztJWEU  .nav-dropdown .link.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  transition: 0.3s all;
+}
+.cid-u1NLztJWEU  .container {
+  display: flex;
+  height: 90px;
+  padding: 0.5rem 0.6rem;
+  flex-wrap: nowrap;
+  background: rgba(255, 255, 255, 0.8) !important;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100vw;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+}
+@media (max-width: 992px) {
+  .cid-u1NLztJWEU  .container {
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u1NLztJWEU  .container {
+    width: 95%;
+    height: 56px !important;
+    padding-right: 1rem;
+    margin-top: 0rem;
+  }
+}
+.cid-u1NLztJWEU  .iconfont-wrapper {
+  color: #000000 !important;
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+.cid-u1NLztJWEU  .dropdown-menu {
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 12px 4px !important;
+  border-radius: 1.5rem;
+  transition: 0.3s all !important;
+  min-width: auto;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+.cid-u1NLztJWEU  .nav-item:focus,
+.cid-u1NLztJWEU  .nav-link:focus {
+  outline: none;
+}
+.cid-u1NLztJWEU  .dropdown .dropdown-menu .dropdown-item {
+  width: auto;
+  transition: all 0.25s ease-in-out;
+}
+.cid-u1NLztJWEU  .dropdown .dropdown-menu .dropdown-item::after {
+  right: 0.5rem;
+}
+.cid-u1NLztJWEU  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont {
+  margin-right: 0.5rem;
+  vertical-align: sub;
+}
+.cid-u1NLztJWEU  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont:before {
+  display: inline-block;
+  transform: scale(1, 1);
+  transition: all 0.25s ease-in-out;
+}
+.cid-u1NLztJWEU  .collapsed .dropdown-menu .dropdown-item:before {
+  display: none;
+}
+.cid-u1NLztJWEU  .collapsed .dropdown .dropdown-menu .dropdown-item {
+  padding: 0.235em 1.5em 0.235em 1.5em !important;
+  transition: none;
+  margin: 0 !important;
+}
+.cid-u1NLztJWEU  .navbar {
+  min-height: 90px;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.cid-u1NLztJWEU  .navbar.opened {
+  transition: all 0.3s;
+}
+.cid-u1NLztJWEU  .navbar .dropdown-item {
+  padding: 0.5rem 1.8rem;
+}
+.cid-u1NLztJWEU  .navbar .navbar-logo img {
+  min-width: 6rem;
+  object-fit: cover;
+}
+.cid-u1NLztJWEU  .navbar .navbar-collapse {
+  z-index: 1;
+  justify-content: flex-end;
+}
+.cid-u1NLztJWEU  .navbar.collapsed {
+  justify-content: center;
+}
+.cid-u1NLztJWEU  .navbar.collapsed .nav-item .nav-link::before {
+  display: none;
+}
+.cid-u1NLztJWEU  .navbar.collapsed.opened .dropdown-menu {
+  top: 0;
+}
+@media (min-width: 992px) {
+  .cid-u1NLztJWEU  .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+    max-height: calc(98.5vh - 3rem);
+  }
+}
+.cid-u1NLztJWEU  .navbar.collapsed .dropdown-menu .dropdown-submenu {
+  left: 0 !important;
+}
+.cid-u1NLztJWEU  .navbar.collapsed .dropdown-menu .dropdown-item:after {
+  right: auto;
+}
+.cid-u1NLztJWEU  .navbar.collapsed .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  border-top: 0.35em solid;
+  border-right: 0.35em solid transparent;
+  border-left: 0.35em solid transparent;
+  border-bottom: 0;
+  top: 41%;
+}
+.cid-u1NLztJWEU  .navbar.collapsed ul.navbar-nav li {
+  margin: auto;
+}
+.cid-u1NLztJWEU  .navbar.collapsed .dropdown-menu .dropdown-item {
+  padding: 0.25rem 1.5rem;
+  text-align: center;
+}
+.cid-u1NLztJWEU  .navbar.collapsed .icons-menu {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztJWEU  .navbar {
+    min-height: 72px;
+  }
+  .cid-u1NLztJWEU  .navbar .navbar-logo img {
+    height: 2.5rem !important;
+    min-width: 2.5rem !important;
+  }
+}
+@media (max-width: 991px) {
+  .cid-u1NLztJWEU  .navbar .nav-item .nav-link::before {
+    display: none;
+  }
+  .cid-u1NLztJWEU  .navbar.opened .dropdown-menu {
+    top: 0;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown-menu .dropdown-submenu {
+    left: 0 !important;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown-menu .dropdown-item:after {
+    right: auto;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+    border-top: 0.35em solid;
+    border-right: 0.35em solid transparent;
+    border-left: 0.35em solid transparent;
+    border-bottom: 0;
+    top: 40%;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown-menu .dropdown-item {
+    padding: 0.25rem 1.5rem !important;
+    text-align: center;
+  }
+  .cid-u1NLztJWEU  .navbar .navbar-brand {
+    flex-shrink: initial;
+    flex-basis: auto;
+    word-break: break-word;
+    padding-right: 10px;
+  }
+  .cid-u1NLztJWEU  .navbar .navbar-toggler {
+    flex-basis: auto;
+  }
+  .cid-u1NLztJWEU  .navbar .icons-menu {
+    padding-left: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+.cid-u1NLztJWEU  .navbar.navbar-short .navbar-logo img {
+  height: 2rem;
+}
+.cid-u1NLztJWEU  .dropdown-item.active,
+.cid-u1NLztJWEU  .dropdown-item:active {
+  background-color: transparent;
+}
+.cid-u1NLztJWEU  .navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+}
+.cid-u1NLztJWEU  .nav-dropdown .link.dropdown-toggle {
+  margin-right: 1.667em;
+}
+.cid-u1NLztJWEU  .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
+  margin-right: 0;
+  padding: 0.667em 1.667em;
+}
+.cid-u1NLztJWEU  .navbar.navbar-expand-lg .dropdown .dropdown-menu {
+  background: #ffffff;
+}
+.cid-u1NLztJWEU  .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
+  margin: 0;
+  left: 105%;
+  transform: none;
+  top: -12px;
+}
+.cid-u1NLztJWEU  .navbar .dropdown.open > .dropdown-menu {
+  display: flex;
+}
+.cid-u1NLztJWEU  ul.navbar-nav {
+  flex-wrap: wrap;
+}
+.cid-u1NLztJWEU  .navbar-buttons {
+  text-align: center;
+  min-width: 140px;
+}
+@media (max-width: 992px) {
+  .cid-u1NLztJWEU  .navbar-buttons {
+    text-align: left;
+  }
+}
+.cid-u1NLztJWEU  button.navbar-toggler {
+  outline: none;
+  width: 31px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  align-self: center;
+}
+.cid-u1NLztJWEU  button.navbar-toggler .hamburger span {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  border-right: 5px;
+  background-color: #000000;
+}
+.cid-u1NLztJWEU  button.navbar-toggler .hamburger span:nth-child(1) {
+  top: 0;
+  transition: all 0.2s;
+}
+.cid-u1NLztJWEU  button.navbar-toggler .hamburger span:nth-child(2) {
+  top: 8px;
+  transition: all 0.15s;
+}
+.cid-u1NLztJWEU  button.navbar-toggler .hamburger span:nth-child(3) {
+  top: 8px;
+  transition: all 0.15s;
+}
+.cid-u1NLztJWEU  button.navbar-toggler .hamburger span:nth-child(4) {
+  top: 16px;
+  transition: all 0.2s;
+}
+.cid-u1NLztJWEU  nav.opened .hamburger span:nth-child(1) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all 0.2s;
+}
+.cid-u1NLztJWEU  nav.opened .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+  transition: all 0.25s;
+}
+.cid-u1NLztJWEU  nav.opened .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  transition: all 0.25s;
+}
+.cid-u1NLztJWEU  nav.opened .hamburger span:nth-child(4) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all 0.2s;
+}
+.cid-u1NLztJWEU  .navbar-dropdown {
+  padding: 0 1rem;
+}
+.cid-u1NLztJWEU  a.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cid-u1NLztJWEU  .icons-menu {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .cid-u1NLztJWEU  .icons-menu {
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .cid-u1NLztJWEU  .navbar {
+    height: 70px;
+  }
+  .cid-u1NLztJWEU  .navbar.opened {
+    height: auto;
+  }
+  .cid-u1NLztJWEU  .nav-item .nav-link:hover::before {
+    width: 175%;
+    max-width: calc(100% + 2rem);
+    left: -1rem;
+  }
+}
+.cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu {
+  display: none;
+  width: max-content;
+  max-width: 500px !important;
+  transform: translateX(-50%);
+  top: calc(100% + 20px);
+  left: 50%;
+}
+.cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown-item {
+  line-height: 1 !important;
+}
+.cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
+  align-items: center;
+  display: flex;
+  height: max-content !important;
+  min-height: max-content !important;
+}
+.cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
+  display: inline-block;
+  position: static;
+  margin-left: 0.5rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  transition: 0.3s all;
+  transform: rotate(-90deg);
+}
+.cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
+  transform: rotate(0deg);
+}
+.cid-u1NLztJWEU  .mbr-section-btn {
+  margin: -0.6rem -0.6rem;
+}
+.cid-u1NLztJWEU  .navbar-toggler {
+  margin-left: 12px;
+  margin-right: 8px;
+  order: 1000;
+}
+@media (max-width: 991px) {
+  .cid-u1NLztJWEU  .navbar-brand {
+    margin-right: auto;
+  }
+  .cid-u1NLztJWEU  .navbar-collapse {
+    z-index: -1 !important;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(8px);
+  }
+  .cid-u1NLztJWEU  .navbar-nav .nav-item .nav-link::after {
+    margin-left: 10px;
+  }
+  .cid-u1NLztJWEU  .navbar-nav .dropdown-item:hover {
+    background-color: rgba(27, 31, 10, 0.06);
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu {
+    max-width: 100% !important;
+    transform: translateX(0);
+    top: 10px;
+    left: 0;
+    padding: 8px !important;
+    border-radius: 1rem;
+    background-color: rgba(27, 31, 10, 0.04) !important;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown-item {
+    padding: 8px !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
+    align-items: center;
+    display: flex;
+    height: max-content !important;
+    min-height: max-content !important;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
+    display: inline-block;
+    position: static;
+    margin-left: 0.5rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    transition: 0.3s all;
+    transform: rotate(0deg);
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
+    transform: rotate(180deg);
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown > .dropdown-menu .dropdown-submenu {
+    position: static;
+    width: 100%;
+    max-width: 100% !important;
+    transform: translateX(0) !important;
+    top: 0;
+    left: 0;
+    padding: 8px !important;
+    border-radius: 1rem;
+    background-color: rgba(27, 31, 10, 0.04) !important;
+  }
+  .cid-u1NLztJWEU  .navbar .dropdown.open > .dropdown-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 575px) {
+  .cid-u1NLztJWEU  .navbar-collapse {
+    padding: 1rem;
+  }
+}
+</style>
+
+<section class="menu menu2 cid-u1NLztJWEU" once="menu" id="menu-5-u1NLztJWEU">
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="navbar-logo">
+					<a href="">
+						<img src="{% static 'images/photo-1581291518857-4e27b48ff24e.jpeg' %}" style="height: 4.3rem;">
+					</a>
+				</span>
+				<span class="navbar-caption-wrap">
+          <a class="navbar-caption text-black display-4" href="">SnapTask</a>
+        </span>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-bs-toggle="collapse" data-target="#navbarSupportedContent"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#"
+              aria-expanded="false">Delete</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#">Completed</a>
+          </li>
+        </ul>
+        <div class="navbar-buttons mbr-section-btn">
+          <a class="btn btn-primary display-4" href="{% url 'signup' %}">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+    <style>
+.cid-u1NLztJzbB {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .cid-u1NLztJzbB {
+    align-items: flex-end;
+  }
+  .cid-u1NLztJzbB .row {
+    justify-content: flex-start;
+  }
+  .cid-u1NLztJzbB .content-wrap {
+    padding: 1rem 3rem;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .cid-u1NLztJzbB .content-wrap {
+    min-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u1NLztJzbB {
+    -webkit-align-items: center;
+    align-items: flex-end;
+  }
+  .cid-u1NLztJzbB .mbr-row {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .cid-u1NLztJzbB .content-wrap {
+    width: 100%;
+  }
+}
+.cid-u1NLztJzbB .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u1NLztJzbB .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #000000;
+}
+.cid-u1NLztJzbB .mbr-section-title,
+.cid-u1NLztJzbB .mbr-section-subtitle {
+  text-align: left;
+  color: var(--dominant-color, #ffc091);
+}
+.cid-u1NLztJzbB .mbr-text,
+.cid-u1NLztJzbB .mbr-section-btn {
+  text-align: left;
+}
+</style>
+<section class="header18 cid-u1NLztJzbB mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/4MFOBeUCPkw?autoplay&#x3D;1&amp;loop&#x3D;1&amp;playlist&#x3D;4MFOBeUCPkw&amp;t&#x3D;20&amp;mute&#x3D;1&amp;playsinline&#x3D;1&amp;controls&#x3D;0&amp;showinfo&#x3D;0&amp;autohide&#x3D;1&amp;allowfullscreen&#x3D;true&amp;mode&#x3D;transparent" id="hero-15-u1NLztJzbB">
+  <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-8">
+        <h1
+          class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1 animate__animated animate__delay-1s animate__fadeInUp">
+          <strong>SnapTask</strong>
+        </h1>
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7 animate__animated animate__delay-1s animate__fadeInUp">Get organized, get productive, and get things done with SnapTask - the ultimate to-do list app.</p>
+        <div class="mbr-section-btn">
+          <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="{% url 'user_signin' %}">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u1NLztJ6nV {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: transparent;
+}
+.cid-u1NLztJ6nV .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u1NLztJ6nV .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztJ6nV .card-content-text {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .cid-u1NLztJ6nV .card-content-text {
+    padding: 2.25rem 2.25rem 0 2.25rem;
+  }
+}
+@media (min-width: 992px) {
+  .cid-u1NLztJ6nV .card-content-text {
+    padding: 4rem 4rem 1rem 4rem;
+  }
+}
+.cid-u1NLztJ6nV .card-wrapper {
+  background: #ffffff;
+}
+.cid-u1NLztJ6nV .mbr-text,
+.cid-u1NLztJ6nV .mbr-section-btn {
+  color: #000000;
+  text-align: left;
+}
+.cid-u1NLztJ6nV .card-title,
+.cid-u1NLztJ6nV .card-box {
+  text-align: left;
+  color: #000000;
+}
+</style>
+<section class="article9 cid-u1NLztJ6nV" id="about-me-9-u1NLztJ6nV">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="card col-md-12 col-lg-10">
+        <div class="card-wrapper">
+          <div class="card-content-text">
+            <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
+            <strong>Who We Are</strong>
+          </h3>
+          <div class="row card-box align-left">
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <p class="mbr-text mbr-fonts-style display-7">At SnapTask, we&#x27;re on a mission to revolutionize the way you manage your tasks. Say goodbye to sticky notes and forgotten to-dos, and hello to a world of productivity and accomplishment.</p>
+              </div>
+            </div>
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <p class="mbr-text mbr-fonts-style display-7">Our user-friendly interface makes it easy to add, delete, and mark tasks as completed. With SnapTask, you&#x27;ll never miss a beat.</p>
+              </div>
+            </div>
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                <p class="mbr-text mbr-fonts-style display-7">Join the SnapTask community and take control of your to-do list today!</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="image-wrapper d-flex justify-content-center mt-3">
+            <img src="{% static 'images/photo-1488190211105-8b0e65b80b4e.jpeg' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u1NLztKtwj {
+  overflow: hidden;
+  background-image: url("{% static 'images/photo-1620912189866-474843ba5c14.jpeg' %}");
+}
+</style>
+<section class="image02 cid-u1NLztKtwj mbr-fullscreen mbr-parallax-background" id="image-13-u1NLztKtwj">
+    <div class="container">
+        <div class="row"></div>
+    </div>
+</section>
+    <style>
+.cid-u1NLztKNLl {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: transparent;
+}
+.cid-u1NLztKNLl .item-wrapper img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50% !important;
+}
+.cid-u1NLztKNLl .item-wrapper {
+  background: #ffffff;
+  margin-bottom: 2rem;
+  padding: 2.25rem;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cid-u1NLztKNLl .item-wrapper {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u1NLztKNLl .item-wrapper {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+.cid-u1NLztKNLl .card-title,
+.cid-u1NLztKNLl .iconfont-wrapper {
+  color: #000000;
+}
+.cid-u1NLztKNLl .card-text {
+  color: #000000;
+  text-align: left;
+}
+.cid-u1NLztKNLl .content-head {
+  max-width: 800px;
+}
+.cid-u1NLztKNLl .mbr-section-title {
+  color: #000000;
+}
+.cid-u1NLztKNLl .card-title,
+.cid-u1NLztKNLl .img-wrapper {
+  text-align: center;
+}
+.cid-u1NLztKNLl .img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+</style>
+<section class="people04 cid-u1NLztKNLl" id="testimonials-4-u1NLztKNLl">
+	<div class="container">
+		<div class="row mb-5 justify-content-center">
+			<div class="col-12 mb-0 content-head">
+				<h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+					<strong>Rave</strong>
+				</h3>	
+			</div>
+		</div>
+		<div class="row mbr-masonry" data-masonry="{&quot;percentPosition&quot;: true }">
+			<div class="item features-without-image col-12 col-md-6 col-lg-4 active">
+				<div class="item-wrapper">
+					<div class="card-box align-left">
+						<p class="card-text mbr-fonts-style display-7">
+							SnapTask has changed my life! I&#x27;m finally organized and on top of my tasks.
+						</p>
+						<div class="img-wrapper mt-4 mb-3">
+							<img src="{% static 'images/photo-1676385901160-a86dc9ccdfe1.jpeg' %}" data-slide-to="0" data-bs-slide-to="0">
+						</div>
+						<h5 class="card-title mbr-fonts-style display-7">
+							<strong>Samantha</strong>
+						</h5>
+					</div>
+				</div>
+			</div>
+			<div class="item features-without-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="card-box align-left">
+						<p class="card-text mbr-fonts-style display-7">
+							I can&#x27;t imagine my life without SnapTask. It&#x27;s like having a personal assistant in my pocket!
+						</p>
+						<div class="img-wrapper mt-4 mb-3">
+							<img src="{% static 'images/photo-1522091066250-665186289043.jpeg' %}" data-slide-to="1" data-bs-slide-to="1">
+						</div>
+						<h5 class="card-title mbr-fonts-style display-7">
+							<strong>Michael</strong>
+						</h5>
+					</div>
+				</div>
+			</div>
+			<div class="item features-without-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="card-box align-left">
+						<p class="card-text mbr-fonts-style display-7">
+							SnapTask is a game-changer. It&#x27;s fun, easy to use, and keeps me motivated to get things done.
+						</p>
+						<div class="img-wrapper mt-4 mb-3">
+							<img src="{% static 'images/photo-1643029950351-6ae7f69186fc.jpeg' %}" data-slide-to="2" data-bs-slide-to="2">
+						</div>
+						<h5 class="card-title mbr-fonts-style display-7">
+							<strong>Emily</strong>
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <style>
+  .cid-u1NLztLkOA {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--dominant-color, #260a30);
+  }
+
+  .cid-u1NLztLkOA input {
+    padding: 1.2rem 1.5rem;
+    border: none !important;
+    height: 100%;
+  }
+
+  .cid-u1NLztLkOA input:hover {
+    border: none !important;
+  }
+
+  .cid-u1NLztLkOA .btn {
+    height: 100%;
+    margin: auto;
+  }
+
+  @media (min-width: 992px) {
+    .cid-u1NLztLkOA .text-wrapper {
+      padding: 0 2rem;
+    }
+  }
+
+  .cid-u1NLztLkOA .row {
+    justify-content: center;
+  }
+
+  .cid-u1NLztLkOA .mbr-section-btn {
+    display: flex;
+    margin-bottom: 1.2rem;
+    width: fit-content;
+  }
+
+  @media (min-width: 768px) {
+    .cid-u1NLztLkOA .mbr-section-btn {
+      margin-left: initial;
+    }
+  }
+
+  .cid-u1NLztLkOA .mbr-section-btn .btn {
+    width: auto;
+  }
+
+  @media (max-width: 991px) {
+    .cid-u1NLztLkOA .image-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .cid-u1NLztLkOA .content-wrapper {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .cid-u1NLztLkOA .justify-content-center {
+    align-items: center;
+  }
+
+  .cid-u1NLztLkOA .mbr-section-title {
+    text-align: center;
+    color: var(--dominant-text, #ffd7ef);
+  }
+</style>
+<section class="header2 cid-u1NLztLkOA" id="subscription-form-1-u1NLztLkOA">
+  <div class="container">
+    <div class="row content-wrapper justify-content-center">
+      <div class="col-lg-8 mbr-form">
+        <div class="">
+          <h1 class="mbr-section-title mbr-fonts-style mb-5 display-1">
+            <strong>Join the SnapTask Community Today!</strong>
+          </h1>
+        </div>
+        <div class="text-wrapper align-left" data-form-type="formoid">
+          <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
+            <div class="row">
+              <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+              <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                Oops...! some problem!
+              </div>
+            </div>
+            <div class="dragArea row">
+              <div data-for="email" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                <input type="email" name="email" placeholder="test@email.com" data-form-field="email" class="form-control display-7" value="" id="email-header02-0">
+              </div>
+              <div class="col-auto mbr-section-btn"><button type="submit" class="w-100 btn btn-primary display-7">Join Now</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u1NLztLCwU {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #ffffff;
+}
+.cid-u1NLztLCwU .item:focus,
+.cid-u1NLztLCwU span:focus {
+  outline: none;
+}
+.cid-u1NLztLCwU .item {
+  cursor: pointer;
+}
+.cid-u1NLztLCwU .grid-container {
+  grid-row-gap: 2rem;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztLCwU .grid-container {
+    grid-row-gap: 1rem;
+  }
+}
+.cid-u1NLztLCwU .grid-container-1,
+.cid-u1NLztLCwU .grid-container-2,
+.cid-u1NLztLCwU .grid-container-3 {
+  gap: 0 2rem;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztLCwU .grid-container-1,
+  .cid-u1NLztLCwU .grid-container-2,
+  .cid-u1NLztLCwU .grid-container-3 {
+    gap: 0 1rem;
+  }
+}
+.cid-u1NLztLCwU .mbr-section-title {
+  color: #000000;
+}
+.cid-u1NLztLCwU .mbr-text,
+.cid-u1NLztLCwU .mbr-section-btn {
+  color: #000000;
+}
+.cid-u1NLztLCwU .content-head {
+  max-width: 800px;
+}
+.cid-u1NLztLCwU .container,
+.cid-u1NLztLCwU .container-fluid {
+  overflow: hidden;
+}
+.cid-u1NLztLCwU .grid-container {
+  display: grid;
+  transform: translate3d(-3rem, 0, 0);
+  width: 115vw;
+  grid-column-gap: 1rem;
+}
+.cid-u1NLztLCwU .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cid-u1NLztLCwU .grid-item img {
+  min-width: 30vw;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztLCwU .grid-item img {
+    min-width: 35vw;
+  }
+}
+.cid-u1NLztLCwU .grid-container-1,
+.cid-u1NLztLCwU .grid-container-2,
+.cid-u1NLztLCwU .grid-container-3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+}
+.cid-u1NLztLCwU .grid-container-1 {
+  align-items: flex-end;
+}
+.cid-u1NLztLCwU .grid-container-2 {
+  align-items: flex-start;
+}
+</style>
+<section class="gallery07 cid-u1NLztLCwU" id="gallery-16-u1NLztLCwU">
+  <div class="container-fluid gallery-wrapper">
+    <div class="row justify-content-center">
+      <div class="col-12 content-head">
+        <div class="mbr-section-head mb-5">
+          <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+            <strong>SnapTask in Action</strong>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-container-3" style="transform: translate3d(-200px, 0px, 0px);">
+        <div class="grid-item">
+          <img src="{% static 'images/photo-1543286386-2e659306cd6c.jpeg' %}">
+        </div>
+        <div class="grid-item">
+          <img src="{% static 'images/photo-1502945015378-0e284ca1a5be.jpeg' %}">
+        </div>
+        <div class="grid-item">
+          <img src="{% static 'images/photo-1497032628192-86f99bcd76bc.jpeg' %}">
+        </div>
+        <div class="grid-item">
+          <img src="{% static 'images/photo-1453928582365-b6ad33cbcf64.jpeg' %}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u1NLztLCTG {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: transparent;
+}
+.cid-u1NLztLCTG .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u1NLztLCTG .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-u1NLztLCTG .card-wrapper {
+  overflow: hidden;
+  background: #ffffff;
+}
+.cid-u1NLztLCTG .text-wrapper {
+  padding: 4rem 3rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .cid-u1NLztLCTG .text-wrapper {
+    padding: 2.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u1NLztLCTG .text-wrapper {
+    padding: 1.5rem;
+  }
+}
+.cid-u1NLztLCTG .row {
+  align-items: center;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+.cid-u1NLztLCTG .row {
+  flex-direction: row-reverse;
+}
+.cid-u1NLztLCTG .image-wrapper {
+  padding: 0 1rem;
+}
+.cid-u1NLztLCTG img,
+.cid-u1NLztLCTG .image-wrapper {
+  height: 600px;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztLCTG img,
+  .cid-u1NLztLCTG .image-wrapper {
+    max-height: 350px;
+  }
+}
+.cid-u1NLztLCTG .mbr-section-title {
+  color: #000000;
+}
+.cid-u1NLztLCTG .mbr-text {
+  color: #000000;
+}
+</style>
+<section class="article05 cid-u1NLztLCTG" id="generic-text-5-u1NLztLCTG">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="card-wrapper">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+              <img class="w-100" src="{% static 'images/photo-1516342243255-ac2202f9f149.jpeg' %}">
+            </div>
+            <div class="col-12 col-lg col-md-12">
+              <div class="text-wrapper align-left">
+                <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                  <strong>Why Choose SnapTask?</strong>
+                </h1>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">SnapTask is more than just a to-do list app. It&#x27;s a productivity powerhouse designed to help you conquer your day.</p>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7">With SnapTask, you can organize tasks, set deadlines, and track your progress with ease. It&#x27;s time to take control of your to-do list.</p>
+                <p class="mbr-text mbr-fonts-style display-7">Join thousands of satisfied users who have unlocked their productivity potential with SnapTask.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u1NLztMg2c {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: transparent;
+}
+.cid-u1NLztMg2c .mbr-text {
+  color: #000000;
+}
+.cid-u1NLztMg2c .mbr-section-subtitle {
+  color: #000000;
+}
+.cid-u1NLztMg2c .mbr-section-title {
+  color: #000000;
+  text-align: center;
+}
+.cid-u1NLztMg2c .mbr-text,
+.cid-u1NLztMg2c .item .mbr-section-btn {
+  text-align: left;
+}
+.cid-u1NLztMg2c .item-wrapper {
+  background: #ffffff;
+  margin-bottom: 2rem;
+  padding: 2.25rem;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cid-u1NLztMg2c .item-wrapper {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u1NLztMg2c .item-wrapper {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+</style>
+<section class="list05 cid-u1NLztMg2c" id="faq-3-u1NLztMg2c">
+    <div class="container">
+        <div class="col-12 mb-5 content-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>FAQ</strong>
+            </h3>   
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="item features-without-image col-12 active">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>Is SnapTask available on all devices?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
+                            Yes, SnapTask is available on iOS, Android, and web browsers, so you can access your tasks anytime, anywhere.
+                        </p>
+                    </div>
+                </div>
+                <div class="item features-without-image col-12">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>Can I share tasks with others?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
+                            Absolutely! SnapTask allows you to collaborate with friends, family, and colleagues by sharing tasks and working together towards common goals.
+                        </p>
+                    </div>
+                </div>
+                <div class="item features-without-image col-12">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>Is SnapTask secure and private?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
+                            Your privacy and security are our top priorities. SnapTask uses encryption and secure protocols to keep your data safe and confidential.
+                        </p>
+                    </div>
+                </div>
+                  <div class="item features-without-image col-12">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>Can I set reminders for tasks?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
+                            Yes, SnapTask lets you set reminders and notifications for important tasks, so you never miss a deadline or forget an important to-do.
+                        </p>
+                    </div>
+                </div>
+                  <div class="item features-without-image col-12">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>Can I customize task categories?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">
+                            SnapTask offers customizable categories, tags, and labels, so you can organize your tasks in a way that makes sense to you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+  .cid-u1NLztMH7L {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: transparent;
+  }
+  .cid-u1NLztMH7L img,
+  .cid-u1NLztMH7L .item-img {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  @media (max-width: 767px) {
+    .cid-u1NLztMH7L img,
+    .cid-u1NLztMH7L .item-img {
+      max-height: 300px;
+    }
+  }
+  .cid-u1NLztMH7L .item:focus,
+  .cid-u1NLztMH7L span:focus {
+    outline: none;
+  }
+  .cid-u1NLztMH7L .item-wrapper {
+    position: relative;
+  }
+  .cid-u1NLztMH7L .slide-content {
+    position: relative;
+    border-radius: 4px;
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-flow: column nowrap;
+  }
+  @media (min-width: 768px) {
+    .cid-u1NLztMH7L .slide-content .item-content {
+      padding: 2.25rem 2.25rem 0;
+    }
+    .cid-u1NLztMH7L .slide-content .item-footer {
+      padding: 0 2.25rem 2.25rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .cid-u1NLztMH7L .slide-content .item-content {
+      padding: 1.5rem 1.5rem 0;
+    }
+    .cid-u1NLztMH7L .slide-content .item-footer {
+      padding: 0 1.5rem 1.5rem;
+    }
+  }
+  .cid-u1NLztMH7L .mbr-section-btn {
+    margin-top: auto !important;
+  }
+  .cid-u1NLztMH7L .mbr-section-title {
+    color: #000000;
+  }
+  .cid-u1NLztMH7L .mbr-text,
+  .cid-u1NLztMH7L .mbr-section-btn {
+    text-align: left;
+  }
+  .cid-u1NLztMH7L .item-title {
+    text-align: left;
+  }
+  .cid-u1NLztMH7L .item-subtitle {
+    text-align: left;
+    color: #000000;
+  }
+  .cid-u1NLztMH7L .embla__slide {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 370px;
+    max-width: 370px;
+  }
+  @media (max-width: 768px) {
+    .cid-u1NLztMH7L .embla__slide {
+      min-width: 85%;
+      max-width: initial;
+    }
+  }
+  .cid-u1NLztMH7L .embla__button--next,
+  .cid-u1NLztMH7L .embla__button--prev {
+    display: flex;
+  }
+  .cid-u1NLztMH7L .embla__button {
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: -1.5rem;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: all 0.3s;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .cid-u1NLztMH7L .embla__button {
+      display: none;
+    }
+  }
+  .cid-u1NLztMH7L .embla__button:disabled {
+    cursor: default;
+    display: none;
+  }
+  .cid-u1NLztMH7L .embla__button:hover {
+    background: #000;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .cid-u1NLztMH7L .embla__button.embla__button--prev {
+    left: 0;
+    margin-left: 2.5rem;
+  }
+  .cid-u1NLztMH7L .embla__button.embla__button--next {
+    right: 0;
+    margin-right: 2.5rem;
+  }
+  @media (max-width: 767px) {
+    .cid-u1NLztMH7L .embla__button {
+      top: auto;
+    }
+  }
+  .cid-u1NLztMH7L .embla {
+    position: relative;
+    width: 100%;
+  }
+  .cid-u1NLztMH7L .embla__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  .cid-u1NLztMH7L .embla__viewport.is-draggable {
+    cursor: grab;
+  }
+  .cid-u1NLztMH7L .embla__viewport.is-dragging {
+    cursor: grabbing;
+  }
+  .cid-u1NLztMH7L .embla__container {
+    display: flex;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (max-width: 768px) {
+    .cid-u1NLztMH7L .embla__container .embla__slide:first-child {
+      margin-left: 2rem !important;
+    }
+    .cid-u1NLztMH7L .embla__container .embla__slide:last-child {
+      margin-right: 2rem !important;
+    }
+  }
+  .cid-u1NLztMH7L .content-head {
+    max-width: 800px;
+  }
+</style>
+<section class="features_17 mbr-embla cid-u1NLztMH7L" id="features-17-u1NLztMH7L">
+	<div class="position-relative">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-12 content-head">
+					<div class="mbr-section-head mb-5">
+						<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+							<strong>Key Features</strong>
+						</h4>
+						<h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Discover the power of SnapTask&#x27;s game-changing features.</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-auto-play-interval="5" data-draggable="true">
+			<div class="embla__viewport container-fluid">
+				<div class="embla__container">
+					<div class="embla__slide slider-image item active" style="margin-left: 1rem; margin-right: 1rem;">
+						<div class="slide-content">
+							<div class="item-img">
+								<div class="item-wrapper">
+									<img src="{% static 'images/photo-1606837035172-49928c1ff820.jpeg' %}" data-slide-to="1" data-bs-slide-to="1">
+								</div>
+							</div>
+							<div class="item-content">
+								<h5 class="item-title mbr-fonts-style display-5">
+									<strong>Easy Task Management</strong>
+								</h5>
+								<p class="mbr-text mbr-fonts-style mt-3 display-7">Add, delete, and mark tasks as completed with a single click.</p>
+							</div>
+							<div class="mbr-section-btn item-footer mt-2"><a href="{% url 'signup' %}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a></div>
+						</div>
+					</div>
+					<div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+						<div class="slide-content">
+							<div class="item-img">
+								<div class="item-wrapper">
+									<img src="{% static 'images/photo-1499750310107-5fef28a66643.jpeg' %}" data-slide-to="2" data-bs-slide-to="2">
+								</div>
+							</div>
+							<div class="item-content">
+								<h5 class="item-title mbr-fonts-style display-5">
+									<strong>Deadline Tracking</strong>
+								</h5>
+								<p class="mbr-text mbr-fonts-style mt-3 display-7">Set deadlines and track your progress effortlessly.</p>
+							</div>
+							<div class="mbr-section-btn item-footer mt-2">
+								<a href="{% url 'signup' %}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+							</div>
+						</div>
+					</div>
+					<div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+						<div class="slide-content">
+							<div class="item-img">
+								<div class="item-wrapper">
+									<img src="{% static 'images/photo-1617529497832-5ad49d9b5928.jpeg' %}" data-slide-to="3" data-bs-slide-to="3">
+								</div>
+							</div>
+							<div class="item-content">
+								<h5 class="item-title mbr-fonts-style display-5">
+									<strong>Collaboration</strong>
+								</h5>
+								<p class="mbr-text mbr-fonts-style mt-3 display-7">Share tasks and work together towards common goals.</p>
+							</div>
+							<div class="mbr-section-btn item-footer mt-2">
+								<a href="{% url 'signup' %}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+							</div>
+						</div>
+					</div>
+					<div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+						<div class="slide-content">
+							<div class="item-img">
+								<div class="item-wrapper">
+									<img src="{% static 'images/photo-1501504905252-473c47e087f8.jpeg' %}" data-slide-to="4" data-bs-slide-to="4">
+								</div>
+							</div>
+							<div class="item-content">
+								<h5 class="item-title mbr-fonts-style display-5">
+									<strong>Reminders &amp; Notifications</strong>
+								</h5>
+								<p class="mbr-text mbr-fonts-style mt-3 display-7">Never miss a deadline with customizable reminders and notifications.</p>
+							</div>
+							<div class="mbr-section-btn item-footer mt-2">
+								<a href="{% url 'signup' %}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+							</div>
+						</div>
+					</div>
+					<div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+						<div class="slide-content">
+							<div class="item-img">
+								<div class="item-wrapper">
+									<img src="{% static 'images/photo-1568790309276-16462ea4161d.jpeg' %}" data-slide-to="5" data-bs-slide-to="5">
+								</div>
+							</div>
+							<div class="item-content">
+								<h5 class="item-title mbr-fonts-style display-5">
+									<strong>Custom Categories</strong>
+								</h5>
+								<p class="mbr-text mbr-fonts-style mt-3 display-7">Organize tasks with customizable categories, tags, and labels.</p>
+							</div>
+							<div class="mbr-section-btn item-footer mt-2">
+								<a href="{% url 'signup' %}" class="btn item-btn btn-primary display-7" target="_blank">Get Started</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="embla__button embla__button--prev">
+				<span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
+				<span class="sr-only visually-hidden visually-hidden visually-hidden">Previous</span>
+			</button>
+			<button class="embla__button embla__button--next">
+				<span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
+				<span class="sr-only visually-hidden visually-hidden visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+</section>
+    <style>
+  .cid-u1NLztNHhE {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    background-color: transparent;
+  }
+
+  .cid-u1NLztNHhE .item-mb {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    .cid-u1NLztNHhE .item-mb {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .cid-u1NLztNHhE .item-head {
+    background: var(--primary-color, #9fe870);
+    padding: 2.25rem;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .cid-u1NLztNHhE .item-head {
+      padding: 2rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cid-u1NLztNHhE .item-head {
+      padding: 2rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .cid-u1NLztNHhE .item-content {
+    padding: 2.25rem 2.25rem 0;
+    background: #ffffff;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .cid-u1NLztNHhE .item-content {
+      padding: 0rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cid-u1NLztNHhE .item-content {
+      padding: 0rem 1.5rem;
+    }
+  }
+
+  .cid-u1NLztNHhE .item-wrapper {
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    padding: 0rem;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  @media (max-width: 767px) {
+    .cid-u1NLztNHhE .item-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .cid-u1NLztNHhE .item-wrapper .item-footer {
+      padding: 0 1.5rem 2rem;
+    }
+  }
+
+  @media (min-width: 1201px) {
+    .cid-u1NLztNHhE .item-wrapper .item-footer {
+      padding: 0 2rem 2rem;
+    }
+  }
+
+  .cid-u1NLztNHhE .btn {
+    width: -webkit-fill-available;
+  }
+
+  .cid-u1NLztNHhE .item:focus,
+  .cid-u1NLztNHhE span:focus {
+    outline: none;
+  }
+
+  .cid-u1NLztNHhE .mbr-section-btn {
+    margin-top: auto !important;
+    padding: 2rem 2rem 0;
+  }
+
+  @media (max-width: 991px) {
+    .cid-u1NLztNHhE .mbr-section-btn {
+      padding: 0rem 2.25rem 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cid-u1NLztNHhE .mbr-section-btn {
+      padding: 0rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .cid-u1NLztNHhE .mbr-section-title {
+    color: #000000;
+  }
+
+  .cid-u1NLztNHhE .mbr-section-subtitle {
+    color: #ffffff;
+  }
+
+  .cid-u1NLztNHhE .mbr-text,
+  .cid-u1NLztNHhE .mbr-section-btn {
+    text-align: left;
+  }
+
+  .cid-u1NLztNHhE .item-title {
+    text-align: left;
+    color: var(--primary-text, #ffffff);
+  }
+
+  .cid-u1NLztNHhE .item-subtitle {
+    text-align: left;
+    color: var(--primary-text, #ffffff);
+  }
+
+  .cid-u1NLztNHhE .content-head {
+    max-width: 800px;
+  }
+</style>
+<section class="pricing1 cid-u1NLztNHhE" id="pricing-cards-1-u1NLztNHhE">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 content-head">
+        <div class="mbr-section-head mb-5">
+          <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+            <strong>Pricing</strong>
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>Starter</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>Free</strong>/forever
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Get started with SnapTask for free and enjoy essential task management features.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="{% url 'signup' %}" class="btn item-btn btn-primary display-7">Sign Up</a></div>
+        </div>
+      </div>
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>Pro</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>$4.99</strong>/forever
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Unlock advanced features including deadline tracking, collaboration, and reminders.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Sign Up</a></div>
+        </div>
+      </div>
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>Premium</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>$9.99</strong>/forever
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Experience the full power of SnapTask with premium features and priority support.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Sign Up</a></div>
+        </div>
+      </div>
+      <div class="item features-without-image col-12 col-md-6 col-lg-3 item-mb">
+        <div class="item-wrapper">
+          <div class="item-head">
+            <h5 class="item-title mbr-fonts-style mb-0 display-5">
+              <strong>Enterprise</strong>
+            </h5>
+            <h6 class="item-subtitle mbr-fonts-style mt-0 mb-0 display-7">
+              <strong>Custom</strong>/forever
+            </h6>
+          </div>
+          <div class="item-content">
+            <p class="mbr-text mbr-fonts-style display-7">Tailored solutions for businesses with custom features and dedicated support.</p>
+          </div>
+          <div class="mbr-section-btn item-footer"><a href="" class="btn item-btn btn-primary display-7">Sign Up</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u1NLztN36X {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #ffffff;
+}
+.cid-u1NLztN36X .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u1NLztN36X .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-u1NLztN36X .title .num {
+  width: 100%;
+  display: block;
+}
+.cid-u1NLztN36X .title .card-title {
+  z-index: 1;
+}
+.cid-u1NLztN36X .num {
+  color: var(--primary-color, #9fe870);
+  text-align: center;
+}
+.cid-u1NLztN36X .item-mb {
+  margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztN36X .item-mb {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u1NLztN36X * {
+    text-align: center !important;
+  }
+  .cid-u1NLztN36X .content-column {
+    margin-bottom: 2rem;
+  }
+}
+.cid-u1NLztN36X .content-head {
+  max-width: 800px;
+}
+.cid-u1NLztN36X .card-text {
+  text-align: center;
+}
+.cid-u1NLztN36X .card-title,
+.cid-u1NLztN36X .card-img {
+   text-align: center;
+}
+</style>
+<section class="features023 cid-u1NLztN36X" id="metrics-1-u1NLztN36X">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="card-wrapper mb-5">
+                    <div class="card-box align-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row content-row">
+            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-3">
+                        <span class="num mbr-fonts-style display-1"><strong>100K+</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Happy Users</strong>
+                    </h4>
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-3">
+                        <span class="num mbr-fonts-style display-1"><strong>1M+</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Tasks Completed</strong>
+                    </h4>
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-3">
+                        <span class="num mbr-fonts-style display-1"><strong>99%</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Customer Satisfaction</strong>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+  .cid-u1NLztNgRu {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: transparent;
+  }
+  .cid-u1NLztNgRu .mbr-fallback-image.disabled {
+    display: none;
+  }
+  .cid-u1NLztNgRu .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .cid-u1NLztNgRu .card-wrapper {
+    background: var(--dominant-color, #393193);
+    border-radius: 4px;
+  }
+  @media (max-width: 767px) {
+    .cid-u1NLztNgRu .card-wrapper {
+      padding: 1.5rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .cid-u1NLztNgRu .card-wrapper {
+      padding: 2.25rem;
+    }
+  }
+  @media (min-width: 992px) {
+    .cid-u1NLztNgRu .card-wrapper {
+      padding: 4rem;
+    }
+  }
+  .cid-u1NLztNgRu .mbr-text,
+  .cid-u1NLztNgRu .mbr-section-btn {
+    color: #ffd7ef;
+  }
+  .cid-u1NLztNgRu .card-title,
+  .cid-u1NLztNgRu .card-box {
+    text-align: center;
+    color: var(--dominant-text, #ffd7ef);
+  }
+</style>
+<section class="article13 cid-u1NLztNgRu" id="call-to-action-3-u1NLztNgRu">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-10">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style display-2">
+                            <strong>Ready to Get Organized?</strong>
+                        </h4>
+                        <div class="mbr-section-btn mt-4">
+                        <a class="btn btn-primary display-4" href="{% url 'signup' %}">Sign Up Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+  .cid-u1NLztNIyt {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #ffffff;
+  }
+  .cid-u1NLztNIyt .item-subtitle {
+    line-height: 1.2;
+    color: #000000;
+  }
+  .cid-u1NLztNIyt img,
+  .cid-u1NLztNIyt .item-img {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .cid-u1NLztNIyt .item:focus,
+  .cid-u1NLztNIyt span:focus {
+    outline: none;
+  }
+  .cid-u1NLztNIyt .item {
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 767px) {
+    .cid-u1NLztNIyt .item {
+      margin-bottom: 1rem;
+    }
+  }
+  .cid-u1NLztNIyt .item-wrapper {
+    position: relative;
+    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .cid-u1NLztNIyt .mbr-section-title {
+    color: #232323;
+  }
+  .cid-u1NLztNIyt .mbr-text,
+  .cid-u1NLztNIyt .mbr-section-btn {
+    color: #232323;
+  }
+  .cid-u1NLztNIyt .item-title {
+    color: #232323;
+  }
+  .cid-u1NLztNIyt .content-head {
+    max-width: 800px;
+  }
+</style>
+<section class="features03 cid-u1NLztNIyt" id="news-1-u1NLztNIyt">
+	<div class="container-fluid">
+		<div class="row justify-content-center mb-5">
+			<div class="col-12 content-head">
+				<div class="mbr-section-head">
+					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+						<strong>Latest News</strong>
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="item features-image col-12 col-md-6 col-lg-3 active">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="{% static 'images/photo-1434030216411-0b793f4b4173.jpeg' %}">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">SnapTask Launches New Mobile App</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Jan 19, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">SnapTask is excited to announce the launch of our new mobile app, bringing productivity to your fingertips.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Read More</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="{% static 'images/photo-1633988354540-d3f4e97c67b5.jpeg' %}" data-slide-to="1" data-bs-slide-to="1">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">SnapTask Named Top Productivity App</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Jan 15, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">SnapTask has been recognized as the top productivity app of the year, thanks to our amazing users and dedicated team.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Read More</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="{% static 'images/photo-1595516239376-c777c32a72a4.jpeg' %}" data-slide-to="2" data-bs-slide-to="2">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">SnapTask Partners with Productivity Experts</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Jan 10, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">SnapTask is proud to announce a partnership with leading productivity experts to bring you even more powerful features.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Read More</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="{% static 'images/photo-1507099985932-87a4520ed1d5.jpeg' %}" data-slide-to="3" data-bs-slide-to="3">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">SnapTask Celebrates 1 Million Users</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Jan 5, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">We&#x27;re thrilled to celebrate a major milestone - 1 million users have joined the SnapTask community!</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Read More</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+    <style>
+.cid-u1NLztNWlD {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+}
+.cid-u1NLztNWlD .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u1NLztNWlD .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-u1NLztNWlD .bg-facebook {
+  background: #1778f2;
+  color: #ffffff;
+}
+.cid-u1NLztNWlD .bg-facebook:hover {
+  background: #0b60cb;
+}
+.cid-u1NLztNWlD .bg-twitter {
+  background: #1da1f2;
+  color: #ffffff;
+}
+.cid-u1NLztNWlD .bg-twitter:hover {
+  background: #0c85d0;
+}
+.cid-u1NLztNWlD .bg-instagram {
+  background: #f00075;
+  color: #ffffff;
+}
+.cid-u1NLztNWlD .bg-instagram:hover {
+  background: #bd005c;
+}
+.cid-u1NLztNWlD .bg-tiktok {
+  background: #000000;
+  color: #ffffff;
+}
+.cid-u1NLztNWlD .bg-tiktok:hover {
+  background: #000000;
+}
+.cid-u1NLztNWlD .iconfont-wrapper {
+  display: inline-block;
+  font-size: 32px;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.cid-u1NLztNWlD [class^="socicon-"]:before,
+.cid-u1NLztNWlD [class*=" socicon-"]:before {
+  line-height: 55px;
+  padding: .6rem;
+}
+
+</style>
+<section class="social4 cid-u1NLztNWlD" id="follow-us-1-u1NLztNWlD">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-12">
+                <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2">
+                    <strong>Follow Us on Social</strong>
+                </h3>
+                <div class="social-list align-center">
+                    <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="#">
+                        <span class="socicon-facebook socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-twitter m-2" href="#" target="_blank">
+                        <span class="socicon-twitter socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-instagram m-2" href="#" target="_blank">
+                        <span class="socicon-instagram socicon"></span>
+                    </a>
+                    <a class="iconfont-wrapper bg-tiktok m-2" href="#" target="_blank">
+                        <span class="socicon-tiktok socicon"></span>
+                    </a>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+.cid-u1NLztN355 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: transparent;
+}
+.cid-u1NLztN355 .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u1NLztN355 .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-u1NLztN355 .img-wrapper {
+  text-align: center;
+}
+.cid-u1NLztN355 img {
+  margin: auto;
+  width: 200px;
+}
+.cid-u1NLztN355 .row {
+  align-items: flex-start;
+}
+.cid-u1NLztN355 .item-wrapper {
+  margin-bottom: 2rem;
+  background: #ffffff;
+  padding: 1rem;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztN355 .item-wrapper {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .cid-u1NLztN355 .item-wrapper {
+    padding: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .cid-u1NLztN355 .item-wrapper {
+    margin-bottom: 3rem;
+  }
+}
+.cid-u1NLztN355 .mbr-section-title,
+.cid-u1NLztN355 .mbr-section-subtitle {
+  text-align: center;
+  color: #000000;
+}
+.cid-u1NLztN355 .content-head {
+  max-width: 800px;
+}
+</style>
+<section class="clients3 cid-u1NLztN355" id="clients-2-u1NLztN355">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 content-head">
+        <div class="mb-5">
+          <h5 class="mbr-section-title mbr-fonts-style mb-0 display-2">
+            <strong>Our Clients</strong>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="item features-without-image col-12 col-lg-4 active">
+        <div class="item-wrapper">
+          <div class="img-wrapper">
+            <img src="{% static 'images/short4.png' %}">
+          </div>
+        </div>
+      </div><div class="item features-without-image col-12 col-lg-4">
+        <div class="item-wrapper">
+          <div class="img-wrapper">
+            <img src="{% static 'images/short5.png' %}">
+          </div>
+        </div>
+      </div><div class="item features-without-image col-12 col-lg-4">
+        <div class="item-wrapper">
+          <div class="img-wrapper">
+            <img src="{% static 'images/short3.png' %}">
+          </div>
+        </div>
+      </div>   
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u1NLztNpxm {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: transparent;
+}
+.cid-u1NLztNpxm .mbr-overlay {
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+.cid-u1NLztNpxm form .mbr-section-btn {
+  text-align: center;
+  width: 100%;
+}
+.cid-u1NLztNpxm form .mbr-section-btn .btn {
+  display: inline-flex;
+}
+@media (max-width: 991px) {
+  .cid-u1NLztNpxm form .mbr-section-btn .btn {
+    width: 100%;
+  }
+}
+.cid-u1NLztNpxm .content-head {
+  max-width: 800px;
+}
+
+</style>
+<section class="form5 cid-u1NLztNpxm" id="contact-form-2-u1NLztNpxm">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Get in Touch</strong>
+                    </h3>                    
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            Oops...! some problem!
+                        </div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form02-0">
+                        </div>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form02-0">
+                        </div>
+                        <div class="col-12 form-group mb-3" data-for="textarea">
+                            <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form02-0"></textarea>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7">Send</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+.cid-u1NLztNJBa {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: transparent;
+}
+.cid-u1NLztNJBa .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u1NLztNJBa .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-u1NLztNJBa .mbr-text {
+  color: #000000;
+}
+.cid-u1NLztNJBa .mbr-section-subtitle {
+  color: ##000000;
+  text-align: left;
+}
+.cid-u1NLztNJBa .main-button {
+  margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .cid-u1NLztNJBa .main-button {
+    margin-bottom: 2rem;
+  }
+}
+.cid-u1NLztNJBa .mbr-section-subtitle,
+.cid-u1NLztNJBa .main-button {
+  color: #000000;
+}
+.cid-u1NLztNJBa .google-map {
+  height: 30rem;
+  position: relative;
+  border-radius: 2rem;
+}
+.cid-u1NLztNJBa .google-map iframe {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+}
+.cid-u1NLztNJBa .google-map [data-state-details] {
+  color: #6b6763;
+  height: 1.5em;
+  margin-top: -0.75em;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.cid-u1NLztNJBa .google-map[data-state] {
+  background: #e9e5dc;
+}
+.cid-u1NLztNJBa .google-map[data-state="loading"] [data-state-details] {
+  display: none;
+}
+</style>
+
+<section class="contacts03 cid-u1NLztNJBa" id="contacts-11-u1NLztNJBa">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="col-12 col-md-12">
+          <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
+            <strong>Contact Us</strong>
+          </h5>
+          <p class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
+            Phone: <a href="">123-456-7890</a>
+            <br>Email: info@SnapTask.com
+            <br>Address:  India
+            <br>Working Hours: Mon - Fri: 9am - 5pm</p> 
+        </div>
+      </div>
+      <div class="col-lg-8 side-features">
+        <div class="google-map">
+          <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;%20India" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+  .cid-u1NLztOin8 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #000000;
+    overflow: hidden;
+  }
+</style>
+<section class="footer4 cid-u1NLztOin8" once="footers" id="footer-4-u1NLztOin8">
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © 2024 SnapTask. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'parallax/jarallax.js' %}"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'dropdown/js/navbar-dropdown.js' %}"></script>
+  <script src="{% static 'masonry/masonry.pkgd.min.js' %}"></script>
+  <script src="{% static 'imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'scrollgallery/scroll-gallery.js' %}"></script>
+  <script src="{% static 'embla/embla.min.js' %}"></script>
+  <script src="{% static 'embla/script.js' %}"></script>
+  <script src="{% static 'smoothscroll/smooth-scroll.js' %}"></script>
+  <script src="{% static 'ytplayer/index.js' %}"></script>
+  <script src="{% static 'theme/js/script.js' %}"></script>
+  <script src="{% static 'formoid/formoid.min.js' %}"></script>
+  
+  <script>
+
+    (function(){
+      var animationInput = document.createElement('input');
+      animationInput.setAttribute('name', 'animation');
+      animationInput.setAttribute('type', 'hidden');
+      document.body.append(animationInput);
+    })();
+
+  </script>
+</body>
+</html>

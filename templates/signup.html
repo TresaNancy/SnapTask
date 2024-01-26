@@ -1,0 +1,96 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <meta name="description" content="">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Other meta tags and links can be included here -->
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Add jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Add Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</head>
+    
+<body style="background: url('{% static 'images/bg.jpg' %}') center center fixed; background-size: cover;">
+
+    <!-- ========================= SECTION CONTENT ========================= -->
+    <section class="section-content padding-y">
+    
+        <!-- ============================ COMPONENT REGISTER   ================================= -->
+        <div class="card mx-auto" style="max-width:520px; margin-top:40px; background-color: rgba(255, 255, 255, 0.7);">
+            <article class="card-body">
+                <header class="mb-4"><h4 class="card-title">Sign up</h4></header>
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        <strong></strong> {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+                <form action="{% url 'signup' %}" method="POST">
+                    {% csrf_token %}
+                    <!-- Your form fields go here -->
+                    <div class="form-group">
+                        <label>First name</label>
+                        <input type="text" name="first_name" id="first_name" required class="form-control" placeholder="">
+                    </div>
+                    <!-- Other form fields go here -->
+                    <div class="col form-group">
+                        <label>Last name</label>
+                          <input type="text" name="last_name" id="last_name" required class="form-control" placeholder="">
+                    </div> <!-- form-group end.// -->
+                    {% comment %} </div> <!-- form-row end.// --> {% endcomment %}
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" id="email" required class="form-control" placeholder="">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label>Phone Number</label>
+                        <input type="text"  required class="form-control" id="phone_number" name="phone_number" minlength="10" maxlength="14" placeholder="" >
+                        </div> <!-- form-group end.// -->
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Create password</label>
+                            <input class="form-control" type="password" name="password" id="password">
+                        </div> <!-- form-group end.// --> 
+                        <div class="form-group col-md-6">
+                            <label>Repeat password</label>
+                            <input class="form-control" type="password" name="repeat_password" id="repeat_password">
+                        </div> <!-- form-group end.// -->  
+                    </div>
+                    
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" style="color: white !important;">Register</button>
+                    </div>
+                </form>
+            </article><!-- card-body.// -->
+        </div> <!-- card .// -->
+
+        <p class="text-center mt-4" style="color: white;">Have an account? <a href="{% url 'user_signin' %}" style="color: yellow;">Sign In</a></p>
+        <br><br>
+        <!-- ============================ COMPONENT REGISTER  END.// ================================= -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+
+</body>
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<script src="" async defer></script>
+</body>
+</html>
